@@ -1,0 +1,10 @@
+{
+    "components": {
+        "links": [
+            {
+                "name": "Menu",
+                "route_name": "gotime.components.menu"
+            }
+        ]
+    }
+}

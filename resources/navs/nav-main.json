@@ -2,18 +2,20 @@
     "main": {
         "links": [
             {
-                "name": "Home",
-                "route_name": "home",
-                "exclude_route": true
-            }
-        ]
-    },
-    "footer": {
-        "links": [
+                "name": "Gotime",
+                "route_name": "gotime",
+                "view": "pages.gotime"
+            },
             {
-                "name": "Home",
-                "route_name": "home",
-                "exclude_route": true
+                "name": "JTB",
+                "route_name": "jtb",
+                "view": "pages.jtb"
+            },
+            {
+                "name": "FAQ's",
+                "route_name": "faqs",
+                "view": "pages.faqs",
+                "type": "md"
             }
         ]
     }

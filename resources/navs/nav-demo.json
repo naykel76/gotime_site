@@ -1,0 +1,55 @@
+{
+    "main": {
+        "links": [
+            {
+                "name": "Dashboard",
+                "url": "#",
+                "icon": "home"
+            },
+            {
+                "name": "Projects",
+                "url": "#",
+                "icon": "folder",
+                "exclude_child_routes": true,
+                "children": [
+                    {
+                        "name": "All Projects",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Active",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Archived",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "name": "Documents",
+                "url": "#",
+                "icon": "document-text"
+            },
+            {
+                "name": "Settings",
+                "icon": "cog-6-tooth",
+                "url": "#",
+                "children": [
+                    {
+                        "name": "Profile",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Account",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Notifications",
+                        "url": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -21,23 +21,23 @@ export default defineConfig(({ mode }) => {
                 input: ['resources/scss/app.scss', 'resources/js/app.js'],
                 refresh: true
             }),
-            purge({
-                //     paths: [
-                //         'resources/views/**/*.blade.php',
-                //         'vendor/naykel/**/*.php'
-                //     ],
-                //     safelist: {
-                //         standard: [/^\:has$/, /^\:is$/, /^\:not$/, /^\:where$/, /^\:hover$/, /^\:disabled$/, /^\:focus$/, /^\:active$/],
-                //     },
-                //     extractors: [
-                //         {
-                //             extractor: (content) => {
-                //                 return content.match(/[A-Za-z0-9-_:\/]+/g) || []
-                //             },
-                //             extensions: ['css', 'html', 'vue', 'php']
-                //         },
-                //     ],
-            })
+            // purge({
+            //     paths: [
+            //         'resources/views/**/*.blade.php',
+            //         'vendor/naykel/**/*.php'
+            //     ],
+            //     safelist: {
+            //         standard: [/^\:has$/, /^\:is$/, /^\:not$/, /^\:where$/, /^\:hover$/, /^\:disabled$/, /^\:focus$/, /^\:active$/],
+            //     },
+            //     extractors: [
+            //         {
+            //             extractor: (content) => {
+            //                 return content.match(/[A-Za-z0-9-_:\/]+/g) || []
+            //             },
+            //             extensions: ['css', 'html', 'vue', 'php']
+            //         },
+            //     ],
+            // })
         ],
     }
 });

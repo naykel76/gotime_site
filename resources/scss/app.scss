@@ -1,17 +1,131 @@
-@use "../../node_modules/nk_jtb/src/maps_and_variables/base" as * with (
-    $primary: #12486b,
-    $secondary: #419197,
-    $accent: #78d6c6
+@use '../../node_modules/nk_jtb/src/maps_and_variables/base' as * with (
+    $primary: hsl(195, 14%, 11%),
+    $secondary: hsl(202, 100%, 41%),
+    $accent: #e6c637,
+    $base-font: (
+        'Inter',
+        system-ui,
+        sans-serif
+    )
 );
-@use "../../node_modules/nk_jtb/src/maps_and_variables/components" as * with (
-    $navbar-bg: transparent,
+
+@use '../../node_modules/nk_jtb/src/maps_and_variables/components' as * with (
+    $navbar-bg: $primary
 );
-@use "../../node_modules/nk_jtb/src/build" as *;
 
-// optional imports
-// @use "../../node_modules/nk_jtb/src/extras/nk-app" as *;
-// @use "../../node_modules/nk_jtb/src/extras/nk-docs" as *;
+@use '../../node_modules/nk_jtb/src/build' as *;
+@use '../../node_modules/nk_jtb/src/extras/nk-docs' as * with($question-color: #c40c9a);
+@use '../../node_modules/nk_jtb/src/extras/nk-app' as *;
 
-[x-cloak] {
-    display: none !important;
+.nk-docs {
+    /* // color: #f1f5f9; // heading color */
+
+    blockquote {
+        background: oklch(34.619% 0.0736 256.058);
+        border-left: 4px solid oklch(62.31% 0.1881 259.83);
+        border-radius: 0.375rem;
+    }
+
+    .docs-container {
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+        // max-width: 1400px; // restricts the entire page
+        margin: 0 auto;
+        min-height: 100vh;
+          
+        // adding gap only puts gap between the sidebar and main
+        gap: 10rem;
+    }
+
+    // this is the main section including the toc
+    main {
+        display: grid;
+        grid-column: 2 / 4;
+        grid-template-columns: subgrid;
+        align-items: start;
+        background: rgb(197, 157, 82)!important;
+    }
+
+    main > div {
+      
+
+        grid-column: 1;
+        display: contents;
+    }
+
+    .sidebar {
+        overflow-y: auto;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        // scroll bar does not appear when using fit-content
+        // height: fit-content;
+    }
+
+    .toc {
+        grid-column: 2;
+        grid-row: 1 / 999;
+        position: sticky;
+        top: 2rem;
+        height: fit-content;
+        align-self: start;
+    }
+
+    .toc-title {
+        text-transform: uppercase;
+        /* color: #64748b; */
+        letter-spacing: 0.05em;
+    }
+
+    .toc ul {
+        list-style: none;
+    }
+
+    .toc a {
+        display: block;
+        /* color: #94a3b8; */
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition: all 0.2s;
+    }
+
+    .toc a:hover {
+        /* color: #38bdf8; */
+    }
+
+    .toc a.active {
+        /* color: #38bdf8; */
+        /* border-left-color: #38bdf8; */
+    }
+
+    .menu-title {
+        /* color: #64748b; */
+    }
+
+    /* // nice colors for docs */
+    .some-txt {
+        /* color: #64748b; */
+        a {
+            /* color: #64748b; */
+            &:hover {
+                /* color: #38bdf8; */
+            }
+        }
+    }
+
+    .lead {
+        /* color: #94a3b8; */
+    }
+
+    h2 {
+        border-bottom: 1px solid #334155;
+    }
+
+    p {
+        /* color: #cbd5e1; */
+    }
+
+    .note-title {
+        /* color: #60a5fa; */
+    }
 }
