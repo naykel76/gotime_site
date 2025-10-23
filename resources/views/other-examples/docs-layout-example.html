@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documentation Layout</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: #0f172a;
+                color: #cbd5e1;
+                line-height: 1.6;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 280px 1fr 240px;
+                min-height: 100vh;
+                max-width: 1920px;
+                margin: 0 auto;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                background: #1e293b;
+                border-right: 1px solid #334155;
+                padding: 2rem 1.5rem;
+                overflow-y: auto;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #38bdf8;
+                margin-bottom: 2rem;
+            }
+
+            .nav-section {
+                margin-bottom: 2rem;
+            }
+
+            .nav-title {
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #64748b;
+                margin-bottom: 0.75rem;
+                letter-spacing: 0.05em;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 0.5rem 0.75rem;
+                color: #cbd5e1;
+                text-decoration: none;
+                border-radius: 0.375rem;
+                font-size: 0.875rem;
+                transition: all 0.2s;
+                margin-bottom: 0.25rem;
+            }
+
+            .nav-link:hover {
+                background: #334155;
+                color: #38bdf8;
+            }
+
+            .nav-link.active {
+                background: #1e40af;
+                color: #fff;
+            }
+
+            /* Main Content */
+            .main-content {
+                padding: 3rem 4rem;
+                max-width: 900px;
+            }
+
+            .breadcrumb {
+                display: flex;
+                gap: 0.5rem;
+                font-size: 0.875rem;
+                color: #64748b;
+                margin-bottom: 2rem;
+            }
+
+            .breadcrumb a {
+                color: #64748b;
+                text-decoration: none;
+            }
+
+            .breadcrumb a:hover {
+                color: #38bdf8;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                color: #f1f5f9;
+                margin-bottom: 1rem;
+            }
+
+            .lead {
+                font-size: 1.25rem;
+                color: #94a3b8;
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 1.875rem;
+                color: #f1f5f9;
+                margin-top: 3rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #334155;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                color: #f1f5f9;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+                color: #cbd5e1;
+            }
+
+            .code-block {
+                background: #1e293b;
+                border: 1px solid #334155;
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+                overflow-x: auto;
+                font-family: 'Courier New', monospace;
+                font-size: 0.875rem;
+                color: #38bdf8;
+            }
+
+            .note {
+                background: #1e3a5f;
+                border-left: 4px solid #3b82f6;
+                padding: 1rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0.375rem;
+            }
+
+            .note-title {
+                font-weight: 600;
+                color: #60a5fa;
+                margin-bottom: 0.5rem;
+            }
+
+            /* Table of Contents */
+            .toc {
+                padding: 3rem 1.5rem;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                overflow-y: auto;
+            }
+
+            .toc-title {
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #64748b;
+                margin-bottom: 1rem;
+                letter-spacing: 0.05em;
+            }
+
+            .toc-link {
+                display: block;
+                padding: 0.375rem 0;
+                color: #94a3b8;
+                text-decoration: none;
+                font-size: 0.875rem;
+                transition: color 0.2s;
+                border-left: 2px solid transparent;
+                padding-left: 1rem;
+                margin-left: -1rem;
+            }
+
+            .toc-link:hover {
+                color: #38bdf8;
+            }
+
+            .toc-link.active {
+                color: #38bdf8;
+                border-left-color: #38bdf8;
+            }
+
+            .toc-link.sub {
+                padding-left: 2rem;
+                margin-left: -1rem;
+                font-size: 0.8125rem;
+            }
+
+            @media (max-width: 1280px) {
+                .toc {
+                    display: none;
+                }
+
+                .container {
+                    grid-template-columns: 280px 1fr;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .sidebar {
+                    display: none;
+                }
+
+                .container {
+                    grid-template-columns: 1fr;
+                }
+
+                .main-content {
+                    padding: 2rem 1.5rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="logo">Docs</div>
+
+                <nav class="nav-section">
+                    <div class="nav-title">Getting Started</div>
+                    <a href="#" class="nav-link active">Installation</a>
+                    <a href="#" class="nav-link">Configuration</a>
+                    <a href="#" class="nav-link">Quick Start</a>
+                </nav>
+
+                <nav class="nav-section">
+                    <div class="nav-title">Core Concepts</div>
+                    <a href="#" class="nav-link">Grid System</a>
+                    <a href="#" class="nav-link">Responsive Design</a>
+                    <a href="#" class="nav-link">Customization</a>
+                    <a href="#" class="nav-link">Dark Mode</a>
+                </nav>
+
+                <nav class="nav-section">
+                    <div class="nav-title">Components</div>
+                    <a href="#" class="nav-link">Buttons</a>
+                    <a href="#" class="nav-link">Cards</a>
+                    <a href="#" class="nav-link">Forms</a>
+                    <a href="#" class="nav-link">Navigation</a>
+                    <a href="#" class="nav-link">Modals</a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="breadcrumb">
+                    <a href="#">Docs</a>
+                    <span>/</span>
+                    <span>Installation</span>
+                </div>
+
+                <h1>Installation</h1>
+                <p class="lead">Get started with our framework by installing it via npm or using a CDN link.</p>
+
+                <h2 id="npm">Install via npm</h2>
+                <p>The recommended way to install the framework is through npm. This allows you to easily manage dependencies and stay up to date with the latest releases.</p>
+
+                <div class="code-block">
+                    npm install framework-name<br>
+                    # or<br>
+                    yarn add framework-name
+                </div>
+
+                <div class="note">
+                    <div class="note-title">Note</div>
+                    <div>Make sure you have Node.js installed on your system before running the npm install command.</div>
+                </div>
+
+                <h2 id="cdn">Using CDN</h2>
+                <p>For quick prototyping or testing, you can include the framework directly via CDN without any build process.</p>
+
+                <div class="code-block">
+                    &lt;link href="https://cdn.example.com/framework.css" rel="stylesheet"&gt;
+                </div>
+
+                <h3 id="setup">Basic Setup</h3>
+                <p>After installation, import the framework in your main JavaScript or CSS file to start using it in your project.</p>
+
+                <div class="code-block">
+                    import 'framework-name/dist/framework.css';<br>
+                    import { Component } from 'framework-name';
+                </div>
+
+                <h2 id="config">Configuration</h2>
+                <p>Create a configuration file at the root of your project to customize the framework settings according to your needs.</p>
+
+                <div class="code-block">
+                    module.exports = {<br>
+                    theme: {<br>
+                    colors: {<br>
+                    primary: '#38bdf8',<br>
+                    secondary: '#818cf8'<br>
+                    }<br>
+                    }<br>
+                    }
+                </div>
+            </main>
+
+            <!-- Table of Contents -->
+            <aside class="toc">
+                <div class="toc-title">On This Page</div>
+                <a href="#npm" class="toc-link active">Install via npm</a>
+                <a href="#cdn" class="toc-link">Using CDN</a>
+                <a href="#setup" class="toc-link sub">Basic Setup</a>
+                <a href="#config" class="toc-link">Configuration</a>
+            </aside>
+        </div>
+    </body>
+
+</html>

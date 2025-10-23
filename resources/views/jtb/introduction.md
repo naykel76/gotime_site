@@ -1,4 +1,4 @@
-# JTB – Just the Basics
+<div class="toc" data-toc>
 
 - [Introduction](#introduction)
 - [Philosophy](#philosophy)
@@ -9,6 +9,10 @@
 - [Comparing Approaches](#comparing-approaches)
 - [No Runtime Dependencies](#no-runtime-dependencies)
 - [Getting Started](#getting-started)
+  
+</div>
+
+# JTB – Just the Basics
 
 ## Introduction
 

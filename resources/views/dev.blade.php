@@ -1,84 +1,60 @@
-<x-layouts.base :title="$title ?? null" class="pxy-5 space-y">
-
+<x-layouts.base :title="$title ?? null" class="container mt-5 ">
     <div class="bx">
-        <div class="bx-title">Document Markup Structure</div>
-        {{-- <p>This is a straightforward three-column grid. The dashed gray border shows the outer wrapper that defines the grid layout.</p> --}}
+        <div class="bx-title">Document Page Structure</div>
 
-{{-- current-md-markup-structure  --}}
-        <main class="markdown-layout flex gap-5">
-            <aside class="left-sidebar w-18 bg-stripes-pink bdr-pink">
-                <div class="bx tac txt-sm txt-upper">Left-Sidebar</div>
-            </aside>
-            <div class="main-content-area bg-stripes-green bdr-green">
-                <div class="toc">
-                    <ul>
-                        <li><a href="#heading-2">Heading 2</a></li>
-                    </ul>
+        <main class="docs-layout">
+            <aside class="left-sidebar bdr-5 bg-stripes-pink bdr-pink">Navigation</aside>
+            <div class="main-content-area bdr-5 bg-stripes-fuchsia bdr-fuchsia">
+                <div class="toc bdr-5 bg-stripes-amber bdr-amber" data-toc>
+                    Table of Contents
                 </div>
-                <h1>Page Heading<a id="page-heading" href="#page-heading" class="heading-permalink" aria-hidden="true" title="Permalink"> #</a></h1>
+                <div class="markdown-content bdr-5 bg-stripes-sky bdr-sky">
+                    <h1>Page Heading</h1>
+                    <p>Some introductory text for the page.</p>
+                </div>
             </div>
         </main>
 
-    </div>
-
-    <div class="bx">
-        <div class="bx-title">3 Column Grid</div>
-        <p>This is a straightforward three-column grid. The dashed gray border shows the outer wrapper that defines the grid layout.</p>
         <!-- prettier-ignore-start -->
-        <pre><x-torchlight-code language="css">@verbatim
-        .side-main-side {
-            display: grid;
-            grid-template-columns: 1fr 4fr 1fr;
-        }
-        @endverbatim </x-torchlight-code></pre>
-        <!-- prettier-ignore-end -->
-        <main class="side-main-side">
-            <aside class="left-sidebar bg-stripes-pink bdr-pink">
-                <div class="bx tac txt-sm txt-upper">Left-Sidebar</div>
-            </aside>
-            <div class="main-content-area bg-stripes-green bdr-green">
-                <div class="docs-container bg-sky-100 bdr-sky">
-                    <div class="bx tac txt-sm txt-upper">Main</div>
-                    <p>The width of the content area is defined by the container size (indicated by the blue border), not the outer wrapper. The hatched section will shrink and grow as needed.</p>
-                </div>
+        <pre><x-torchlight-code language="blade">@verbatim
+        <main class="docs-layout">
+            <aside class="left-sidebar">Navigation</aside>
+            <div class="main-content-area">
+                <div class="toc" data-toc>Table of Contents</div>
+                <div class="markdown-content">Content</div>
             </div>
-            <aside class="right-sidebar bg-stripes-amber bdr-amber">
-                <div class="bx tac txt-sm txt-upper">Right-Sidebar</div>
-            </aside>
         </main>
+        @endverbatim</x-torchlight-code></pre>
+        <!-- prettier-ignore-end -->
     </div>
-
-
-    {{-- Important note: The structure of the markdown rendered content div above cannot be changed, as the markdown renderer depends on it. --}}
-    {{-- /* Sizes and colors are arbitrary for demonstration purposes only */ --}}
 
     <style>
-        .side-main-side {
+        .docs-layout {
             display: grid;
-            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: 1fr;
         }
 
-        /* these classes are arbitrary for demonstration and visual purposes */
-        .markdown-layout,
-        .side-main-side {
-            border: 5px dashed gray;
-            gap: 0.5rem;
-            padding: 0.5rem
+        @media (min-width: 768px) {
+            .docs-layout {
+                grid-template-columns: 250px 1fr;
+                gap: 1rem;
+            }
         }
 
-        .left-sidebar,
-        .right-sidebar,
-        .main-content-area,
-        .docs-container {
-            border-width: 5px;
-            padding: 1rem;
-            min-height: 20vh;
-        }
+        @media (min-width: 1024px) {
+            .main-content-area {
+                display: grid;
+                grid-template-columns: 1fr 250px;
+                gap: 1rem;
+                align-items: start;
+            }
 
-        .docs-container {
-            max-width: 700px;
-            margin: 0 auto;
+            .toc {
+                grid-column: 2;
+                grid-row: 1;
+                position: sticky;
+                top: 1rem;
+            }
         }
     </style>
-
 </x-layouts.base>
