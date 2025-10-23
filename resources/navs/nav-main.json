@@ -2,6 +2,11 @@
     "main": {
         "links": [
             {
+                "name": "Docs Example",
+                "route_name": "pages.examples.markdown-page-example",
+                "exclude:route": true
+            },
+            {
                 "name": "DEV",
                 "route_name": "dev"
             },

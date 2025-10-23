@@ -17,115 +17,262 @@
 @use '../../node_modules/nk_jtb/src/extras/nk-docs' as * with($question-color: #c40c9a);
 @use '../../node_modules/nk_jtb/src/extras/nk-app' as *;
 
+// make colors available
+@use '../../node_modules/nk_jtb/src/maps_and_variables/colors' as *;
+@use 'sass:map';
+
+// Typography
+$text-heading: #f1f5f9; // slate-100
+$text-default: #cbd5e1; // slate-300
+$text-lead: #94a3b8; // slate-400
+$text-muted: #64748b; // slate-500
+$text-link: #38bdf8; // sky-400
+$text-link-hover: #38bdf8; // sky-400
+$text-active: #fff; // white
+$text-note-title: #60a5fa; // blue-400
+$text-code: #38bdf8; // sky-400
+
+// Backgrounds
+$bg-body: #0f172a; // slate-900
+$bg-sidebar: #1e293b; // slate-800
+$bg-nav-link-hover: #334155; // slate-700
+$bg-nav-link-active: #1e40af; // blue-800
+$bg-code-block: #1e293b; // slate-800
+$bg-note: #1e3a5f; // blue-900
+
+// Borders
+$border-sidebar: #334155; // slate-700
+$border-code-block: #334155; // slate-700
+$border-heading: #334155; // slate-700
+$border-note: #3b82f6; // blue-500
+$border-toc-link-active: #38bdf8; // sky-400
+
+// Additional - Not yet implemented
+$text-meta: #475569; // slate-600
+$text-code-inline: #e879f9; // fuchsia-400
+$text-disabled: #475569; // slate-600
+$bg-code-inline: #312e81; // indigo-950
+$bg-hover: #334155; // slate-700
+$border-default: #334155; // slate-700
+
 .nk-docs {
-    /* // color: #f1f5f9; // heading color */
+    background: $bg-body;
+    color: map.get($oklch-colors, slate-200);
+    // body {
+    //     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    //     background: $bg-body;
+    //     color: $text-default;
+    //     line-height: 1.6;
+    // }
 
-    blockquote {
-        background: oklch(34.619% 0.0736 256.058);
-        border-left: 4px solid oklch(62.31% 0.1881 259.83);
-        border-radius: 0.375rem;
-    }
+    // .container {
+    //     display: grid;
+    //     grid-template-columns: 280px 1fr 240px;
+    //     min-height: 100vh;
+    //     max-width: 1920px;
+    //     margin: 0 auto;
+    // }
 
-    .docs-container {
-        display: grid;
-        grid-template-columns: 250px 1fr 250px;
-        // max-width: 1400px; // restricts the entire page
-        margin: 0 auto;
-        min-height: 100vh;
-          
-        // adding gap only puts gap between the sidebar and main
-        gap: 10rem;
-    }
+    // /* Sidebar */
+    // .sidebar {
+    //     background: $bg-sidebar;
+    //     border-right: 1px solid $border-sidebar;
+    //     padding: 2rem 1.5rem;
+    //     overflow-y: auto;
+    //     position: sticky;
+    //     top: 0;
+    //     height: 100vh;
+    // }
 
-    // this is the main section including the toc
-    main {
-        display: grid;
-        grid-column: 2 / 4;
-        grid-template-columns: subgrid;
-        align-items: start;
-        background: rgb(197, 157, 82)!important;
-    }
+    // .logo {
+    //     font-size: 1.5rem;
+    //     font-weight: 700;
+    //     color: $text-link;
+    //     margin-bottom: 2rem;
+    // }
 
-    main > div {
-      
+    // .nav-section {
+    //     margin-bottom: 2rem;
+    // }
 
-        grid-column: 1;
-        display: contents;
-    }
+    // .nav-title {
+    //     font-size: 0.75rem;
+    //     font-weight: 600;
+    //     text-transform: uppercase;
+    //     color: $text-muted;
+    //     margin-bottom: 0.75rem;
+    //     letter-spacing: 0.05em;
+    // }
 
-    .sidebar {
-        overflow-y: auto;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        // scroll bar does not appear when using fit-content
-        // height: fit-content;
-    }
+    // .nav-link {
+    //     display: block;
+    //     padding: 0.5rem 0.75rem;
+    //     color: $text-default;
+    //     text-decoration: none;
+    //     border-radius: 0.375rem;
+    //     font-size: 0.875rem;
+    //     transition: all 0.2s;
+    //     margin-bottom: 0.25rem;
+    // }
 
-    .toc {
-        grid-column: 2;
-        grid-row: 1 / 999;
-        position: sticky;
-        top: 2rem;
-        height: fit-content;
-        align-self: start;
-    }
+    // .nav-link:hover {
+    //     background: $bg-nav-link-hover;
+    //     color: $text-link-hover;
+    // }
 
-    .toc-title {
-        text-transform: uppercase;
-        /* color: #64748b; */
-        letter-spacing: 0.05em;
-    }
+    // .nav-link.active {
+    //     background: $bg-nav-link-active;
+    //     color: $text-active;
+    // }
 
-    .toc ul {
-        list-style: none;
-    }
+    // /* Main Content */
+    // .main-content {
+    //     padding: 3rem 4rem;
+    //     max-width: 900px;
+    // }
 
-    .toc a {
-        display: block;
-        /* color: #94a3b8; */
-        text-decoration: none;
-        border-left: 2px solid transparent;
-        transition: all 0.2s;
-    }
+    // .breadcrumb {
+    //     display: flex;
+    //     gap: 0.5rem;
+    //     font-size: 0.875rem;
+    //     color: $text-muted;
+    //     margin-bottom: 2rem;
+    // }
 
-    .toc a:hover {
-        /* color: #38bdf8; */
-    }
+    // .breadcrumb a {
+    //     color: $text-muted;
+    //     text-decoration: none;
+    // }
 
-    .toc a.active {
-        /* color: #38bdf8; */
-        /* border-left-color: #38bdf8; */
-    }
+    // .breadcrumb a:hover {
+    //     color: $text-link-hover;
+    // }
 
-    .menu-title {
-        /* color: #64748b; */
-    }
+    // h1 {
+    //     font-size: 2.5rem;
+    //     color: $text-heading;
+    //     margin-bottom: 1rem;
+    // }
 
-    /* // nice colors for docs */
-    .some-txt {
-        /* color: #64748b; */
-        a {
-            /* color: #64748b; */
-            &:hover {
-                /* color: #38bdf8; */
-            }
-        }
-    }
+    // .lead {
+    //     font-size: 1.25rem;
+    //     color: $text-lead;
+    //     margin-bottom: 2rem;
+    // }
 
-    .lead {
-        /* color: #94a3b8; */
-    }
+    // h2 {
+    //     font-size: 1.875rem;
+    //     color: $text-heading;
+    //     margin-top: 3rem;
+    //     margin-bottom: 1rem;
+    //     padding-bottom: 0.5rem;
+    //     border-bottom: 1px solid $border-heading;
+    // }
 
-    h2 {
-        border-bottom: 1px solid #334155;
-    }
+    // h3 {
+    //     font-size: 1.25rem;
+    //     color: $text-heading;
+    //     margin-top: 2rem;
+    //     margin-bottom: 1rem;
+    // }
 
-    p {
-        /* color: #cbd5e1; */
-    }
+    // p {
+    //     margin-bottom: 1.5rem;
+    //     color: $text-default;
+    // }
 
-    .note-title {
-        /* color: #60a5fa; */
-    }
+    // .code-block {
+    //     background: $bg-code-block;
+    //     border: 1px solid $border-code-block;
+    //     border-radius: 0.5rem;
+    //     padding: 1.5rem;
+    //     margin: 1.5rem 0;
+    //     overflow-x: auto;
+    //     font-family: 'Courier New', monospace;
+    //     font-size: 0.875rem;
+    //     color: $text-code;
+    // }
+
+    // .note {
+    //     background: $bg-note;
+    //     border-left: 4px solid $border-note;
+    //     padding: 1rem 1.5rem;
+    //     margin: 1.5rem 0;
+    //     border-radius: 0.375rem;
+    // }
+
+    // .note-title {
+    //     font-weight: 600;
+    //     color: $text-note-title;
+    //     margin-bottom: 0.5rem;
+    // }
+
+    // /* Table of Contents */
+    // .toc {
+    //     padding: 3rem 1.5rem;
+    //     position: sticky;
+    //     top: 0;
+    //     height: 100vh;
+    //     overflow-y: auto;
+    // }
+
+    // .toc-title {
+    //     font-size: 0.75rem;
+    //     font-weight: 600;
+    //     text-transform: uppercase;
+    //     color: $text-muted;
+    //     margin-bottom: 1rem;
+    //     letter-spacing: 0.05em;
+    // }
+
+    // .toc-link {
+    //     display: block;
+    //     padding: 0.375rem 0;
+    //     color: $text-lead;
+    //     text-decoration: none;
+    //     font-size: 0.875rem;
+    //     transition: color 0.2s;
+    //     border-left: 2px solid transparent;
+    //     padding-left: 1rem;
+    //     margin-left: -1rem;
+    // }
+
+    // .toc-link:hover {
+    //     color: $text-link-hover;
+    // }
+
+    // .toc-link.active {
+    //     color: $text-link;
+    //     border-left-color: $border-toc-link-active;
+    // }
+
+    // .toc-link.sub {
+    //     padding-left: 2rem;
+    //     margin-left: -1rem;
+    //     font-size: 0.8125rem;
+    // }
+
+    // @media (max-width: 1280px) {
+    //     .toc {
+    //         display: none;
+    //     }
+
+    //     .container {
+    //         grid-template-columns: 280px 1fr;
+    //     }
+    // }
+
+    // @media (max-width: 768px) {
+    //     .sidebar {
+    //         display: none;
+    //     }
+
+    //     .container {
+    //         grid-template-columns: 1fr;
+    //     }
+
+    //     .main-content {
+    //         padding: 2rem 1.5rem;
+    //     }
+    // }
 }

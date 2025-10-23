@@ -1,9 +1,9 @@
 {
-    "components": {
+    "examples": {
         "links": [
             {
-                "name": "Menu",
-                "route_name": "gotime.components.menu"
+                "name": "Docs Example",
+                "route_name": "pages.examples.markdown-page-example"
             }
         ]
     }

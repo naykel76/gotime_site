@@ -1,9 +1,26 @@
+<div class="toc" data-toc>
+
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Code Block](#code-block)
+- [Example Table](#example-table)
+- [Tips for Writing](#tips-for-writing)
+- [Sample Code Block](#sample-code-block)
+- [Images](#images)
+- [Blockquote Example](#blockquote-example)
+- [Checklist for Publishing](#checklist-for-publishing)
+- [Links](#links)
+- [Footnotes](#footnotes)
+- [Wrapping Up](#wrapping-up)
+
+
+</div>
+
 # Markdown Page Example
 
-This page will give you an idea of how Markdown content will appear on your
-site. Here, you'll see headings, lists, tables, quotes, and other common
-elements with real-like content.
-
+<p class="lead">This page will give you an idea of how Markdown content will 
+appear on your site. Here, you'll see headings, lists, tables, quotes,
+and other common elements with real-like content. </p>
 
 > “Success is not final, failure is not fatal: it is the courage to continue
 > that counts.” <br> - Winston Churchill
@@ -32,14 +49,28 @@ We offer a range of features to make your life easier:
 
 ---
 
+## Code Block
+
+```html +torchlight-html
+<main class="docs-layout">
+    <aside class="left-sidebar">Navigation</aside>
+    <div class="main-content-area">
+        <div class="toc" data-toc>Table of Contents</div>
+        <div class="markdown-content">Content</div>
+    </div>
+</main>
+```
+
+---
+
 ## Example Table
 
-| Feature       | Description                     | Status      |
-|---------------|---------------------------------|------------|
-| Editor        | WYSIWYG Markdown editor         | ✅ Active  |
-| Templates     | Pre-made content templates      | ✅ Active  |
-| Analytics     | Track page views and activity   | ⚠ Beta    |
-| API Access    | Integrate with external tools   | ❌ Coming Soon |
+| Feature    | Description                   | Status        |
+| ---------- | ----------------------------- | ------------- |
+| Editor     | WYSIWYG Markdown editor       | ✅ Active      |
+| Templates  | Pre-made content templates    | ✅ Active      |
+| Analytics  | Track page views and activity | ⚠ Beta        |
+| API Access | Integrate with external tools | ❌ Coming Soon |
 
 ---
 

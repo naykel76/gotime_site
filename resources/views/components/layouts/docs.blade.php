@@ -1,8 +1,8 @@
 <x-layouts.base :title="$title ?? 'Docs'" class="nk-docs">
 
     @includeFirst(['components.layouts.partials.navbar', 'gotime::components.layouts.partials.navbar'])
-    <main class="docs-layout pxy">
-        <aside class="left-sidebar bx">
+    <main class="docs-layout">
+        <aside class="left-sidebar py-2 px space-y">
             @foreach ($data['menus'] as $menu)
                 <x-gt-menu menuname="{{ $menu }}" filename="{{ $data['filename'] }}" class="menu" title="{{ $menu }}" />
             @endforeach
