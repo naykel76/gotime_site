@@ -2,14 +2,13 @@
     "main": {
         "links": [
             {
-                "name": "Gotime",
-                "route_name": "gotime",
-                "view": "pages.gotime"
+                "name": "DEV",
+                "route_name": "dev"
             },
             {
                 "name": "JTB",
-                "route_name": "jtb",
-                "view": "pages.jtb"
+                "route_name": "jtb.introduction",
+                "exclude:route": true
             },
             {
                 "name": "FAQ's",

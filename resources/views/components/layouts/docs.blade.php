@@ -1,27 +1,21 @@
-<x-layouts.base :title="$title ?? 'Docs'" class="nk-docs">
+<x-layouts.base :title="$title ?? 'Docs'" class="nk-dos">
 
     @includeFirst(['components.layouts.partials.navbar', 'gotime::components.layouts.partials.navbar'])
 
-    <div class="docs-container">
-        <aside class="sidebar bdr-r bdr-slate-700 pxy px-1.5 py-2 xyz">
-            @if (empty($data['menus']))
-                <p class="bx warning mr-1 tac">No Menus to display. <br> Maybe you should get onto that!</p>
-            @else
-                <div class="space-y-2">
-                    @foreach ($data['menus'] as $menu)
-                        <x-gt-menu menuname="{{ $menu }}" filename="{{ $data['filename'] }}" class="menu" title="{{ $menu }}" />
-                    @endforeach
-                </div>
-            @endif
+    <main class="nk-main container py-2 md:py-5 flex gap-5">
+
+        <aside class="w-18 fs0 space-y-2">
+            @foreach ($data['menus'] as $menu)
+                <x-gt-menu menuname="{{ $menu }}" filename="{{ $data['filename'] }}" class="menu" title="{{ $menu }}" />
+            @endforeach
         </aside>
 
-        <main >
-            @if (!empty($data['type']))
-                <div class="bx danger">WTF, Come find me!</div>
-            @elseif(!empty($data['path']))
-                <x-gt-markdown path="{{ resource_path('views/' . $data['path']) }}" />
-            @endif
-        </main>
-    </div>
+        <div class="markdown-content-area" style="min-width: 0;">
+            <x-gt-markdown path="{{ resource_path('views/' . $data['path']) }}" />
+        </div>
+
+    </main>
+
+    @includeFirst(['components.layouts.partials.footer', 'gotime::components.layouts.partials.footer'])
 
 </x-layouts.base>

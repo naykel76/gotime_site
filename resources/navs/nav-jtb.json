@@ -2,15 +2,19 @@
     "Getting Started": {
         "links": [
             {
-                "name": "MD Layout Example",
-                "route_name": "jtb.md-layout-example"
+                "name": "Introduction",
+                "route_name": "jtb.introduction"
+            },
+            {
+                "name": "Installation (TBD)",
+                "route_name": "jtb.introduction"
             }
         ]
     },
     "Core Concepts": {
         "links": [
             {
-                "name": "Responsive Design",
+                "name": "Responsive Design (TBD)",
                 "route_name": "jtb.menu",
                 "exclude:route": true
             }
@@ -19,207 +23,8 @@
     "components": {
         "links": [
             {
-                "name": "Menu",
+                "name": "Menu (TBD)",
                 "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            }
-        ]
-    },
-    "components1": {
-        "links": [
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Menu",
-                "route_name": "jtb.menu"
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
-            },
-            {
-                "name": "Test1",
-                "route_name": "jtb.menu",
-                "exclude:route": true
             }
         ]
     }
