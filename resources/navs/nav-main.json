@@ -12,7 +12,12 @@
             },
             {
                 "name": "JTB",
-                "route_name": "jtb.introduction",
+                "route_name": "jtb.installation",
+                "exclude:route": true
+            },
+            {
+                "name": "Gotime",
+                "route_name": "gotime.installation",
                 "exclude:route": true
             },
             {

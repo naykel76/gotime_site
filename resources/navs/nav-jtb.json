@@ -6,8 +6,16 @@
                 "route_name": "jtb.introduction"
             },
             {
-                "name": "Installation (TBD)",
-                "route_name": "jtb.introduction"
+                "name": "Installation",
+                "route_name": "jtb.installation"
+            },
+            {
+                "name": "Configuration",
+                "route_name": "jtb.configuration"
+            },
+            {
+                "name": "Quick Start",
+                "route_name": "jtb.quick-start"
             }
         ]
     },
