@@ -8,6 +8,12 @@
         </div>
     </section>
 
+
+    <div class="py container">
+        <livewire:products.create-edit />
+        <livewire:products.index />
+    </div>
+
     <div class="container-sm py-3">
         <!-- prettier-ignore-start -->
         <pre><x-torchlight-code language="blade">@verbatim
