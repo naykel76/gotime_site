@@ -1,6 +1,10 @@
+<div class="toc" data-toc>
+
 - [Stacked Layout with Click Away](#stacked-layout-with-click-away)
 
-# Horizontal Menu Examples
+</div>
+
+# Menu Examples (WIP)
 
 ## Stacked Layout with Click Away
 
@@ -9,3 +13,8 @@
 > Using flexbox, stacked layouts provide a flexible way to structure responsive
 > designs. By adjusting the layout at different screen sizes, elements can be
 > stacked vertically or arranged side by side based on the available space.
+
+
+
+
+

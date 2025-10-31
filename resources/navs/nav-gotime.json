@@ -4,114 +4,22 @@
             {
                 "name": "Installation",
                 "route_name": "gotime.installation"
-            },
-            {
-                "name": "Configuration",
-                "route_name": "gotime.configuration"
-            },
-            {
-                "name": "Quick Start",
-                "route_name": "gotime.quick-start"
-            }
-        ]
-    },
-    "examples": {
-        "links": [
-            {
-                "name": "Docs Example",
-                "route_name": "pages.examples.markdown-page-example"
-            }
-        ]
-    },
-    "Core Concepts": {
-        "links": [
-            {
-                "name": "Responsive Design (TBD)",
-                "route_name": "dev"
-            }
-        ]
-    },
-    "Casts, Traits and Enums": {
-        "links": [
-            {
-                "name": "Casts",
-                "route_name": "pages.gotime.casts"
-            },
-            {
-                "name": "Crudable",
-                "route_name": "pages.gotime.traits.crudable"
-            },
-            {
-                "name": "Filterable",
-                "route_name": "pages.gotime.traits.filterable"
-            },
-            {
-                "name": "Formable",
-                "route_name": "pages.gotime.traits.formable"
-            },
-            {
-                "name": "HasFormattedDates",
-                "route_name": "pages.gotime.traits.HasFormattedDates"
-            },
-            {
-                "name": "Renderable",
-                "route_name": "pages.gotime.traits.renderable"
-            },
-            {
-                "name": "Enums",
-                "route_name": "pages.gotime.enums"
             }
         ]
     },
     "components": {
         "links": [
             {
-                "name": "Menu (TBD)",
-                "route_name": "dev"
-            },
+                "name": "Menu",
+                "route_name": "gotime.components.menu"
+            }
+        ]
+    },
+    "Guides": {
+        "links": [
             {
-                "name": "Formable",
-                "route_name": "pages.gotime.traits.formable"
-            },
-            {
-                "name": "HasFormattedDates",
-                "route_name": "pages.gotime.traits.HasFormattedDates"
-            },
-            {
-                "name": "Renderable",
-                "route_name": "pages.gotime.traits.renderable"
-            },
-            {
-                "name": "Enums",
-                "route_name": "pages.gotime.enums"
-            },
-            {
-                "name": "Casts",
-                "route_name": "pages.gotime.casts"
-            },
-            {
-                "name": "Crudable",
-                "route_name": "pages.gotime.traits.crudable"
-            },
-            {
-                "name": "Filterable",
-                "route_name": "pages.gotime.traits.filterable"
-            },
-            {
-                "name": "Formable",
-                "route_name": "pages.gotime.traits.formable"
-            },
-            {
-                "name": "HasFormattedDates",
-                "route_name": "pages.gotime.traits.HasFormattedDates"
-            },
-            {
-                "name": "Renderable",
-                "route_name": "pages.gotime.traits.renderable"
-            },
-            {
-                "name": "Enums",
-                "route_name": "pages.gotime.enums"
+                "name": "Livewire CRUD System",
+                "route_name": "gotime.guides.livewire-crud-system"
             }
         ]
     }

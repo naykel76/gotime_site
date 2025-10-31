@@ -1,5 +1,22 @@
 <x-layouts.app>
 
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme') || 'docs';
+        setTheme(savedTheme);
+    </script>
+
+    <div class="theme-switcher">
+        <button class="btn" onclick="setTheme('light')">Light</button>
+        <button class="btn" onclick="setTheme('dark')">Dark</button>
+        <button class="btn" onclick="setTheme('docs')">Docs</button>
+    </div>
+
     <section class="bg-blue-950 py-5-3-2 txt-white">
         <div class="container-md tac">
             <h1 class="txt-3 fw7">Show, don't tell.</h1>

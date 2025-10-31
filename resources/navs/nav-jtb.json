@@ -8,31 +8,14 @@
             {
                 "name": "Installation",
                 "route_name": "jtb.installation"
-            },
-            {
-                "name": "Configuration",
-                "route_name": "jtb.configuration"
-            },
-            {
-                "name": "Quick Start",
-                "route_name": "jtb.quick-start"
-            }
-        ]
-    },
-    "Core Concepts": {
-        "links": [
-            {
-                "name": "Responsive Design (TBD)",
-                "route_name": "jtb.menu",
-                "exclude:route": true
             }
         ]
     },
     "components": {
         "links": [
             {
-                "name": "Menu (TBD)",
-                "route_name": "jtb.menu"
+                "name": "Menu (WIP)",
+                "route_name": "jtb.components.menu"
             }
         ]
     }
