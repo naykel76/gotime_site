@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ed7eeda37ced62897a86da77312ea35",
+    "content-hash": "233983210d39eda58db128e891bd1cc7",
     "packages": [
         {
             "name": "brick/math",
@@ -578,6 +578,86 @@
                 }
             ],
             "time": "2025-12-03T09:33:47+00:00"
+        },
+        {
+            "name": "graham-campbell/markdown",
+            "version": "v16.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Markdown.git",
+                "reference": "040221ff01f167fbe53a047b0e9ac15cbb3b6d79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Markdown/zipball/040221ff01f167fbe53a047b0e9ac15cbb3b6d79",
+                "reference": "040221ff01f167fbe53a047b0e9ac15cbb3b6d79",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.44 || ^11.0 || ^12.0",
+                "illuminate/filesystem": "^10.44 || ^11.0 || ^12.0",
+                "illuminate/support": "^10.44 || ^11.0 || ^12.0",
+                "illuminate/view": "^10.44 || ^11.0 || ^12.0",
+                "league/commonmark": "^2.6.1",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^5.0",
+                "graham-campbell/testbench": "^6.2",
+                "mockery/mockery": "^1.6.6",
+                "phpunit/phpunit": "^10.5.45 || ^11.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GrahamCampbell\\Markdown\\MarkdownServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Markdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                }
+            ],
+            "description": "Markdown Is A CommonMark Wrapper For Laravel",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Markdown",
+                "Laravel-Markdown",
+                "common mark",
+                "commonmark",
+                "framework",
+                "laravel",
+                "markdown"
+            ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Laravel-Markdown/issues",
+                "source": "https://github.com/GrahamCampbell/Laravel-Markdown/tree/v16.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/markdown",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-03-02T23:41:30+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -2020,6 +2100,82 @@
             "time": "2026-01-15T06:54:53+00:00"
         },
         {
+            "name": "livewire/livewire",
+            "version": "v4.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/livewire.git",
+                "reference": "4697085e02a1f5f11410a1b5962400e3539f8843"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/4697085e02a1f5f11410a1b5962400e3539f8843",
+                "reference": "4697085e02a1f5f11410a1b5962400e3539f8843",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^10.0|^11.0|^12.0",
+                "illuminate/routing": "^10.0|^11.0|^12.0",
+                "illuminate/support": "^10.0|^11.0|^12.0",
+                "illuminate/validation": "^10.0|^11.0|^12.0",
+                "laravel/prompts": "^0.1.24|^0.2|^0.3",
+                "league/mime-type-detection": "^1.9",
+                "php": "^8.1",
+                "symfony/console": "^6.0|^7.0",
+                "symfony/http-kernel": "^6.2|^7.0"
+            },
+            "require-dev": {
+                "calebporzio/sushi": "^2.1",
+                "laravel/framework": "^10.15.0|^11.0|^12.0",
+                "mockery/mockery": "^1.3.1",
+                "orchestra/testbench": "^8.21.0|^9.0|^10.0",
+                "orchestra/testbench-dusk": "^8.24|^9.1|^10.0",
+                "phpunit/phpunit": "^10.4|^11.5",
+                "psy/psysh": "^0.11.22|^0.12"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Livewire": "Livewire\\Livewire"
+                    },
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Livewire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "A front-end framework for Laravel.",
+            "support": {
+                "issues": "https://github.com/livewire/livewire/issues",
+                "source": "https://github.com/livewire/livewire/tree/v4.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/livewire",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-02-09T22:59:54+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.10.0",
             "source": {
@@ -2121,6 +2277,78 @@
                 }
             ],
             "time": "2026-01-02T08:56:05+00:00"
+        },
+        {
+            "name": "naykel/gotime",
+            "version": "2.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "C:/Users/natha/sites/nk_packages/gotime",
+                "reference": "e9ea08d8535dc64bc27b5db02c76e22012b8db8e"
+            },
+            "require": {
+                "graham-campbell/markdown": "^16.0",
+                "livewire/livewire": "^4.0",
+                "php": "^8.2",
+                "torchlight/torchlight-laravel": "^0.6.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.25",
+                "nunomaduro/collision": "^8.6",
+                "pestphp/pest": "^4.3",
+                "pestphp/pest-plugin-laravel": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Naykel\\Gotime\\GotimeServiceProvider"
+                    ],
+                    "aliases": {
+                        "Gotime": "Naykel\\Gotime\\Facades\\Gotime",
+                        "FileManagement": "Naykel\\Gotime\\Facades\\FileManagement"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Naykel\\Gotime\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Naykel\\Gotime\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nathan Watts",
+                    "email": "nathan@naykel.com.au",
+                    "homepage": "https://naykel.com.au"
+                }
+            ],
+            "description": "Starter package for NayKel Laravel applications",
+            "homepage": "https://naykel.com.au",
+            "keywords": [
+                "Laravel",
+                "Naykel",
+                "starter"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "nesbot/carbon",
@@ -5847,6 +6075,71 @@
             "time": "2025-12-02T11:56:42+00:00"
         },
         {
+            "name": "torchlight/torchlight-laravel",
+            "version": "v0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
+                "reference": "5670af34e9637761c89687848b8bd71e043d6819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/5670af34e9637761c89687848b8bd71e043d6819",
+                "reference": "5670af34e9637761c89687848b8bd71e043d6819",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.2",
+                "illuminate/cache": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/http": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/view": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "php": "^7.3|^8.0",
+                "ramsey/uuid": "^3.7|^4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^9.0|^10.0",
+                "phpunit/phpunit": "^8.5.23|^9.5|^10.5|^11.5.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Torchlight\\TorchlightServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "laravel",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.1"
+            },
+            "time": "2025-03-22T15:38:26+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.3",
             "source": {
@@ -9556,8 +9849,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "naykel/gotime": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

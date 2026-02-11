@@ -22,3 +22,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+/.agents
+/.cursor
+/.github
+/.vscode
+/tmp
+nk_tasks.md
