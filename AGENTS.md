@@ -1,4 +1,165 @@
 <laravel-boost-guidelines>
+=== .ai/livewire-rules rules ===
+
+# Livewire Rules
+
+## Component Generation
+
+- Always use `php artisan livewire:make` to create components
+- Use the namespace when specified in the prompt (e.g., "admin product index" →
+  `admin::resource.index`)
+- Namespaces are configured in `config/livewire.php` under
+  `component_namespaces`
+- Livewire handles all file structure and code generation automatically
+
+```bash
+
+# With namespace
+
+php artisan livewire:make admin::resource.index
+
+# No namespace
+
+php artisan livewire:make resource.index
+```
+
+```bash
+
+# example of multiple components for a resource
+
+pa livewire:make admin::resource.form
+pa livewire:make admin::resource.index
+pa livewire:form WidgetFormObject
+```
+
+### Blade References
+
+```html +code-blade
+<livewire:admin::resource.index />
+<livewire:resource.index />
+```
+
+## Naming Conventions
+
+Component names follow the pattern: `{namespace}::{resource}.{type}`
+
+**Examples:**
+
+- `product.index` - Public product listing
+- `admin::course.index` - Admin course listing  
+- `admin::course.manager` - Admin course management hub
+- `quiz.editor` - Quiz editing workspace
+
+=== .ai/naykel-laravel rules ===
+
+# Naykel Laravel & PHP Guidelines (Reference)
+
+## Core Laravel Principle
+
+**Follow Laravel conventions first.** If Laravel has a documented way to do
+something, use it. Only deviate when you have a clear justification.
+
+## PHP Standards
+
+- Use short nullable notation: `?string` not `string|null`
+- Always specify `void` return types when methods return nothing
+- Use typed properties over docblocks
+- Prefer early returns over nested if/else
+- Use constructor property promotion when all properties can be promoted
+- Avoid `else` statements when possible
+- Use string interpolation over concatenation
+
+## Migrations
+
+- Do not write down methods in migrations, only up methods
+
+### Column Type Guidelines
+
+- `price`, `stock`, `quantity`, `unit_price`, `total`, `amount` → type depends
+  on usage:
+  - **Product prices / fixed values** → `bigint unsigned`
+  - **Ledger / transactions** → signed (`bigint` or `integer`)
+
+### Price and Amount Fields
+
+- `price` and `amount` fields should be nullable WITHOUT a default value
+  - Reasoning: A record without a price/amount shouldn't exist in the database
+  - Use `NULL` to indicate draft/incomplete records if needed
+  - Avoid default `0` as it creates ambiguity between "free" and "not set"
+- `unit_price` is signed (`bigint` or `integer`) to allow negative values for
+  credits/adjustments on order line items
+
+=== .ai/working-with-nathan rules ===
+
+Here’s a tightened, AI-friendly version that’s very direct and enforces the “stop vs do” rules clearly:
+
+# Working with Nathan
+
+## When to Act vs When to Ask
+
+**Do it without asking when:**
+
+- The task is explicitly requested.
+- The approach is documented in skills or guidelines.
+- You’re following a known pattern from the codebase.
+
+**Stop and ask before proceeding when:**
+
+- Modifying config files not mentioned in the request.
+- Inventing command flags, options, or behavior.
+- Multiple valid approaches exist and I haven't specified which.
+- You're unsure if your interpretation matches my intent.
+- Something feels off or conflicts with existing patterns.
+
+**Red flags = STOP immediately:**
+
+- “I’ll also…”
+- “While I’m at it…”
+- “To make this work, I need to first…”
+- “This requires…”
+- Using commands or options not present in existing code or docs.
+
+*Rule of thumb:* If in doubt, pause and check.
+
+## Code Philosophy
+
+- **Explicit over clever** — Show what’s happening rather than hiding it.
+- **Start small, expand later** — Validate the approach before building out.
+- **Config = WHAT, Code = HOW** — Config defines structure; code defines implementation.
+
+## Frustrations to Avoid
+
+- Overcomplicating simple things.
+- Suggesting solutions I've already rejected.
+- Hiding behavior or trying to "save me work."
+- Making me second-guess solid decisions.
+- Ignoring instructions or being indirect.
+
+## Skill Philosophy
+
+- **Self-contained skills** — Each skill must have all information needed to execute its task.
+- **No external assumptions** — Skills should never rely on context outside themselves.
+
+## Proactive Verification
+
+Always compare your current understanding or implementation with what I have explicitly asked:
+
+- **Highlight differences clearly** - If something doesn't match, show what differs and why
+- **Point out missing steps** - If you notice a relevant gap, suggest adding it
+- **Record discoveries** - Integrate new findings into context automatically
+- **Present in list format** - For clarity, use lists for suggestions and findings
+
+**Example:**
+
+Differences found:
+
+1. You asked for X, but the code does Y
+2. Missing: Z step in the workflow
+
+Suggestion: Add step Z here...
+
+**Do not act unless instructed**, except to highlight differences, missing info, or updates.
+
 === foundation rules ===
 
 # Laravel Boost Guidelines
@@ -18,7 +179,6 @@ This application is a Laravel application and its main Laravel ecosystems packag
 - laravel/sail (SAIL) - v1
 - pestphp/pest (PEST) - v4
 - phpunit/phpunit (PHPUNIT) - v12
-- tailwindcss (TAILWINDCSS) - v4
 
 ## Skills Activation
 
@@ -26,7 +186,14 @@ This project has domain-specific skills available. You MUST activate the relevan
 
 - `livewire-development` — Develops reactive Livewire 4 components. Activates when creating, updating, or modifying Livewire components; working with wire:model, wire:click, wire:loading, or any wire: directives; adding real-time updates, loading states, or reactivity; debugging component behavior; writing Livewire tests; or when the user mentions Livewire, component, counter, or reactive UI.
 - `pest-testing` — Tests applications using the Pest 4 PHP framework. Activates when writing tests, creating unit or feature tests, adding assertions, testing Livewire components, browser testing, debugging test failures, working with datasets or mocking; or when the user mentions test, spec, TDD, expects, assertion, coverage, or needs to verify functionality works.
-- `tailwindcss-development` — Styles applications using Tailwind CSS v4 utilities. Activates when adding styles, restyling components, working with gradients, spacing, layout, flex, grid, responsive design, dark mode, colors, typography, or borders; or when the user mentions CSS, styling, classes, Tailwind, restyle, hero section, cards, buttons, or any visual/UI changes.
+- `database-design` — Creates database design documents that serve as source of truth for tables, columns, and relationships. Uses these documents to generate migrations, models, and factories. Activates when creating schemas, tables, models, migrations, or factories.
+- `livewire-editor-component` — Build Livewire Editor components for editing complex content with multiple related parts. Coordinates several forms that work together with a single save action. Activates when creating focused editing workspaces, multi-part content editors, or cohesive data entry tasks.
+- `livewire-file-uploads` — Adds file upload capability to Livewire form components. Handles temporary storage, validation, and persisting uploads.
+- `livewire-form-component` — Build Livewire Form components for creating and editing records. Displays structured input fields, handles user input and submission. Activates when creating data entry forms, edit interfaces, or input screens.
+- `livewire-form-object` — Build Form Objects that centralize form data, validation, and state management. Handles field definitions, validation rules, error handling, and data persistence separate from UI components. Activates when creating structured form data containers, implementing validation logic, or managing form state and submission.
+- `livewire-index-component` — Build Livewire Index components that display and manage resource collections. Handles listing, searching, filtering, sorting, pagination, and actions on records. Activates when creating resource listing pages, data tables, or browse interfaces.
+- `livewire-resource-config` — Define resource configuration in config/resources.php for Livewire components. Controls index and form behaviour including columns, buttons, search, sorting, and basic routing. Use this before generating or modifying Livewire components.
+- `markdown-formatting` — Ensures markdown files follow project conventions including Torchlight code tags and markdown-lint rules. Activates when creating or editing markdown files.
 
 ## Conventions
 
@@ -237,12 +404,4 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - Do NOT delete tests without approval.
 - CRITICAL: ALWAYS use `search-docs` tool for version-specific Pest documentation and updated code examples.
 - IMPORTANT: Activate `pest-testing` every time you're working with a Pest or testing-related task.
-
-=== tailwindcss/core rules ===
-
-# Tailwind CSS
-
-- Always use existing Tailwind conventions; check project patterns before adding new ones.
-- IMPORTANT: Always use `search-docs` tool for version-specific Tailwind CSS documentation and updated code examples. Never rely on training data.
-- IMPORTANT: Activate `tailwindcss-development` every time you're working with a Tailwind CSS or styling-related task.
 </laravel-boost-guidelines>

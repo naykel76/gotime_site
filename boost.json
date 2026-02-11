@@ -2,7 +2,7 @@
     "agents": [
         "cursor",
         "opencode",
-        "copilot"
+        "opencode"
     ],
     "guidelines": true,
     "herd_mcp": false,
@@ -11,6 +11,13 @@
     "skills": [
         "livewire-development",
         "pest-testing",
-        "tailwindcss-development"
+        "database-design",
+        "livewire-editor-component",
+        "livewire-file-uploads",
+        "livewire-form-component",
+        "livewire-form-object",
+        "livewire-index-component",
+        "livewire-resource-config",
+        "markdown-formatting"
     ]
 }
