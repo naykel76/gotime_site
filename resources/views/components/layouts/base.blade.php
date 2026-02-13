@@ -13,6 +13,8 @@
 
     <body {{ $attributes }}>
 
+        <x-devit::toolbar/>
+        
         {{ $slot }}
 
         <x-gt-toast />

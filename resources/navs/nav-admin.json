@@ -1,0 +1,12 @@
+{
+    "main": {
+        "links": [
+            {
+                "name": "Dashboard",
+                "route_name": "admin.dashboard",
+                "icon": "dashboard",
+                "exclude_route": true
+            }
+        ]
+    }
+}
