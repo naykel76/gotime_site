@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^4.0",
         "naykel/authit": "2.x-dev",
+        "naykel/devit": "dev-main",
         "naykel/gotime": "2.x-dev"
     },
     "require-dev": {
@@ -96,6 +97,13 @@
         "naykel/gotime": {
             "type": "path",
             "url": "C:\\Users\\natha\\sites\\nk_packages\\gotime",
+            "options": {
+                "symlink": true
+            }
+        },
+        "naykel/devit": {
+            "type": "path",
+            "url": "C:\\Users\\natha\\sites\\nk_packages\\devit",
             "options": {
                 "symlink": true
             }
